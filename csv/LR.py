@@ -24,6 +24,7 @@ regressor = regressor.fit( X_train , Y_train )
 
 ## 预测结果
 Y_pred = regressor.predict( X_test )
+print(Y_pred)
 
 ## 结果可视化
 plt.scatter ( X_train , Y_train , color = 'red' )

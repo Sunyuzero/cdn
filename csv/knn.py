@@ -15,7 +15,7 @@ from sklearn.neighbors import KNeighborsClassifier
 dataset = pd.read_csv('Social_Network_Ads.csv') 
 X = dataset.iloc[ : , [2 , 3]].values
 Y = dataset.iloc[ : , 4 ].values
-X_train , X_test , Y_train , Y_test = train_test_split(X , Y , test_size = 0.25 , random_state = 0)
+X_train , X_test , Y_train , Y_test = train_test_split(X , Y , test_size = 0.1 , random_state = 0)
 
 ## 特征缩放
 sc = StandardScaler()

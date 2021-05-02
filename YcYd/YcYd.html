@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--樱花特效在线引入-->
+<script src="https://files.cnblogs.com/files/quaint/sakuraPlus.js"></script>
+<title>YDDDD</title>
+  <script>
+    var timer=null;
+ 
+    function stopClock(){
+      clearTimeout(timer);
+    }
+    //开始计时
+    function startClock() {
+		// 指定日期和时间
+		var EndTime = new Date("2021/05/05 05:20:00");
+		// 当前系统时间
+		var NowTime = new Date();
+		var t = EndTime.getTime() - NowTime.getTime();
+		var d = Math.floor(t / 1000 / 60 / 60 / 24);
+		var h = Math.floor(t / 1000 / 60 / 60 % 24);
+		var m = Math.floor(t / 1000 / 60 % 60);
+		var s = Math.floor(t / 1000 % 60);
+		var html = d + " 天" + h + " 时" + m + " 分" + s + " 秒";
+		if(t>=0) show.innerHTML="倒计时"+html;
+		timer=setTimeout("startClock()",1000);//延时器
+		if(t>=0) document.getElementById("yd").style.display="block";
+	}
+  </script>
+</head>
+<style>
+  #show{
+    font-size: 52px;
+    color:palegreen;
+    text-align:center;
+  }
+  #btn{
+    font-size: 52px;
+    color:palegreen;
+    text-align:center;
+  }
+  </style>
+<body onload="startClock()" onunload="stopClock()">
+  <div id="show"></div>
+  <div id="btn">
+	<button id="yd"  style="display: none;" onclick="javascrtpt:window.location.href='https://sunyuzero.github.io/YcYd'">传送到惊喜的地方</button>
+  </div>
+</body>
+</html>

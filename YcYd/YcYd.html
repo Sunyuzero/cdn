@@ -14,7 +14,7 @@
     //开始计时
     function startClock() {
 		// 指定日期和时间
-		var EndTime = new Date("2021/05/05 05:20:00");
+		var EndTime = new Date("2021/05/03 16:12:00");
 		// 当前系统时间
 		var NowTime = new Date();
 		var t = EndTime.getTime() - NowTime.getTime();
@@ -24,12 +24,13 @@
 		var s = Math.floor(t / 1000 % 60);
 		var html = d + " 天" + h + " 时" + m + " 分" + s + " 秒";
 		if(t>=0) show.innerHTML="倒计时"+html;
+		else show.innerHTML="可以打开专属你的惊喜啦";
 		timer=setTimeout("startClock()",1000);//延时器
-		if(t>=0) document.getElementById("yd").style.display="block";
+		if(t<=0) document.getElementById("yd").style.display="block";
 	}
   </script>
 </head>
-<style>
+  <style>
   #show{
     font-size: 52px;
     color:palegreen;
@@ -41,10 +42,29 @@
     text-align:center;
   }
   </style>
+  <style type="text/css">
+     button {  
+		margin:auto;
+        width: 600px;  
+        padding:28px;  
+        background-color: #FFC0CB;  
+        border-color: #357ebd;  
+        color: #fff;  
+        -moz-border-radius: 100px;  
+        -webkit-border-radius: 10px;  
+        border-radius: 10px; /* future proofing */  
+        -khtml-border-radius: 10px; /* for old Konqueror browsers */  
+        text-align: center;  
+        vertical-align: middle;  
+        border: 1px solid transparent;  
+        font-weight: 500;  
+        font-size:100%  
+      }  
+   </style>
 <body onload="startClock()" onunload="stopClock()">
   <div id="show"></div>
   <div id="btn">
-	<button id="yd"  style="display: none;" onclick="javascrtpt:window.location.href='https://sunyuzero.github.io/YcYd'">传送到惊喜的地方</button>
+	<button id="yd"  style="display: none;" onclick="javascrtpt:window.location.href='https://sunyuzero.github.io/YcYd'">点我传送到惊喜的地方</button>
   </div>
 </body>
 </html>

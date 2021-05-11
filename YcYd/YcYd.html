@@ -14,7 +14,7 @@
     //开始计时
     function startClock() {
 		// 指定日期和时间
-		var EndTime = new Date("2021/05/05 05:20:00");
+		var EndTime = new Date("2021/05/16 00:00:00");
 		// 当前系统时间
 		var NowTime = new Date();
 		var t = EndTime.getTime() - NowTime.getTime();
@@ -22,30 +22,66 @@
 		var h = Math.floor(t / 1000 / 60 / 60 % 24);
 		var m = Math.floor(t / 1000 / 60 % 60);
 		var s = Math.floor(t / 1000 % 60);
-		var html = d + " 天" + h + " 时" + m + " 分" + s + " 秒";
-		if(t>=0) show.innerHTML="倒计时"+html;
-		else show.innerHTML="可以打开专属你的惊喜啦";
+		var html = d + "天" + h + "时" + m + "分" + s + "秒";
+		if(t>=0){
+			time.innerHTML="倒计时 " + html;
+			show.innerHTML="<br>" + "当倒计时变为0天0时0分0秒时<br>一个神秘的大门就此出现<br>而你将会被传送到一个未知的世界<br>这个世界是...<br>算啦不剧透啦<br>总之，一丹，你准备好了吗<br>" ;
+		}
+		else{
+			time.innerHTML = "欢迎来到Yc的心世界";
+			show2.innerHTML = "丹披晨曦，榆心终一<br>我的世界只有漫天的樱花，以及最可爱的一丹"
+		}
 		timer=setTimeout("startClock()",1000);//延时器
-		if(t<=0) document.getElementById("yd").style.display="block";
+		if(t<=0){
+			document.getElementById("yd1").style.display="block";
+			document.getElementById("yd2").style.display="block";
+		}
 	}
   </script>
 </head>
   <style>
   #show{
-    font-size: 52px;
+    font-size:60px;
+	font-family:楷体;
+    color:pink;
+    text-align:center;
+  }
+  #show2{
+    font-size:60px;
+	font-family:楷体;
+    color:pink;
+    text-align:center;
+	position:absolute;
+	top:400px;
+	left:150px;
+  }
+  #time{
+    font-size:80px;
+	font-family:楷体;
     color:palegreen;
     text-align:center;
   }
-  #btn{
-    font-size: 52px;
+  #btn1{
+    font-size: 50px;
     color:palegreen;
     text-align:center;
+	position:absolute;
+	left:100px; 
+	top:200px;
+  }
+  #btn2{
+    font-size: 50px;
+    color:palegreen;
+    text-align:center;
+	position:absolute;
+	right:100px; 
+	top:200px;
   }
   </style>
   <style type="text/css">
      button {  
 		margin:auto;
-        width: 600px;  
+        width: 400px;  
         padding:28px;  
         background-color: #FFC0CB;  
         border-color: #357ebd;  
@@ -57,14 +93,19 @@
         text-align: center;  
         vertical-align: middle;  
         border: 1px solid transparent;  
-        font-weight: 500;  
+        font-weight: 400;  
         font-size:100%  
       }  
    </style>
 <body onload="startClock()" onunload="stopClock()">
+  <div id="time"></div>
   <div id="show"></div>
-  <div id="btn">
-	<button id="yd"  style="display: none;" onclick="javascrtpt:window.location.href='https://sunyuzero.github.io/YcYd'">点我传送到惊喜的地方</button>
+  <div id="btn1">
+	<button id="yd1" style="display: none;" onclick="javascrtpt:window.location.href='https://sunyuzero.github.io/YcYd'">榆Treeの心</button>
   </div>
+  <div id="btn2">
+	<button id="yd2" style="display: none;" onclick="javascrtpt:window.location.href='https://sunyuzero.github.io/2021/05/01/YD/'">晨曦と丹霞</button>
+  </div>
+  <div id="show2"></div>
 </body>
 </html>

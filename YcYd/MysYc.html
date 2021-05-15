@@ -14,7 +14,7 @@
     //开始计时
     function startClock() {
 		// 指定日期和时间
-		var EndTime = new Date("2021/05/15 00:00:00");
+		var EndTime = new Date("2021/05/17 00:00:00");
 		// 当前系统时间
 		var NowTime = new Date();
 		var t = EndTime.getTime() - NowTime.getTime();
@@ -41,11 +41,20 @@
   </script>
 </head>
   <style>
+  body{
+    background: url(https://cdn.jsdelivr.net/gh/sunyuzero/cdn/ycd/cover.png);
+    background-repeat:no-repeat;
+    background-position:center top;
+	filter:alpha(opacity=60);
+	-moz-opacity:0.6;
+	opacity:1;
+  }
   #show{
     font-size:55px;
 	font-family:楷体;
-    color:pink;
+    color:Purple;
     text-align:center;
+	opacity: 1;
   }
   #show2{
     font-size:60px;
@@ -55,36 +64,41 @@
 	position:absolute;
 	top:440px;
 	left:160px;
+	opacity: 1;
   }
   #time{
     font-size:80px;
 	font-family:楷体;
-    color:palegreen;
+    color:Navy;
     text-align:center;
+	opacity: 1;
   }
   #btn1{
     font-size: 50px;
-    color:palegreen;
+    color:Navy;
     text-align:center;
 	position:absolute;
 	left:100px; 
 	top:300px;
+	opacity: 1;
   }
   #btn2{
     font-size: 50px;
-    color:palegreen;
+    color:Navy;
     text-align:center;
 	position:absolute;
 	right:100px; 
 	top:300px;
+	opacity: 1;
   }
   #btn3{
     font-size: 50px;
-    color:palegreen;
+    color:Navy;
     text-align:center;
 	position:absolute;
 	right:569px; 
 	top:150px;
+	opacity: 1;
   }
   </style>
   <style type="text/css">
@@ -113,10 +127,10 @@
 	<button id="yd1" style="display: none;" onclick="javascrtpt:window.location.href='https://sunyuzero.github.io/YcYd'">榆Treeの心</button>
   </div>
   <div id="btn2">
-	<button id="yd2" style="display: none;" onclick="javascrtpt:window.location.href='https://sunyuzero.github.io/2021/05/01/YD/'">晨曦と丹霞</button>
+	<button id="yd2" style="display: none;" onclick="javascrtpt:window.location.href='https://sunyuzero.github.io/2021/05/15/YD/'">晨曦と丹霞</button>
   </div>
    <div id="btn3">
-	<button id="yd3" style="display: none;" onclick="javascrtpt:window.location.href='https://sunyuzero.github.io/cdn/YcYd/photo.html'">秘密Photo</button>
+	<button id="yd3" style="display: none;" onclick="javascrtpt:window.location.href='https://sunyuzero.github.io/cdn/YcYd/photos.html'">秘密Photo</button>
   </div>
   <div id="show2"></div>
 </body>

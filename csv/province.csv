@@ -1,4 +1,4 @@
-﻿name,ID
+﻿name:string,ID
 上海市,10
 广东省,11
 北京市,12
